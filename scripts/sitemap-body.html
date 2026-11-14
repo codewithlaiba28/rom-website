@@ -1,0 +1,445 @@
+
+  
+  <!-- Header / Architectural Dossier Meta -->
+  <header class="mb-8 pt-4 border-b border-[#EAE2D5] pb-6">
+    <div class="flex items-center justify-between mb-3">
+      <div class="flex items-center space-x-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#C5A77A]"></span>
+        <span class="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#C5A77A]">UX Blueprint & Architecture</span>
+      </div>
+      <span class="text-[11px] font-medium tracking-wider text-[#4A6B5F] bg-[#FAF8F4] px-2.5 py-1 rounded-full border border-[#EAE2D5]">v1.4 Spec</span>
+    </div>
+
+    <h1 class="text-3xl font-serif font-medium text-[#192C25] tracking-tight leading-none mb-2">
+      ROAM
+    </h1>
+    <p class="text-xs uppercase tracking-[0.2em] text-[#C5A77A] font-medium mb-3">
+      Beautiful Travel Planner
+    </p>
+    <p class="text-xs text-[#4A6B5F] leading-relaxed">
+      Complete Information Architecture, interactive page relationships, authenticated routing matrix, and design tokens for luxury bespoke travel.
+    </p>
+  </header>
+
+  <!-- Architecture Pillars / Design Tokens Mini Summary -->
+  <section class="mb-8 bg-[#FAF8F4] border border-[#EAE2D5] rounded-2xl p-4 shadow-sm">
+    <div class="text-[10px] uppercase font-bold tracking-[0.18em] text-[#C5A77A] mb-3 flex items-center justify-between">
+      <span>Editorial Palette & Typography</span>
+      <span class="text-[9px] text-[#4A6B5F] lowercase font-normal">tokens spec</span>
+    </div>
+    <div class="grid grid-cols-3 gap-2 mb-3">
+      <div class="flex flex-col items-center p-2 rounded-lg bg-[#F8F6F1] border border-[#EAE2D5]">
+        <div class="w-6 h-6 rounded-full bg-[#F8F6F1] border border-[#C5A77A] shadow-inner mb-1.5"></div>
+        <span class="text-[10px] font-semibold text-[#192C25]">Ivory</span>
+        <span class="text-[9px] text-[#4A6B5F]">#F8F6F1</span>
+      </div>
+      <div class="flex flex-col items-center p-2 rounded-lg bg-[#F8F6F1] border border-[#EAE2D5]">
+        <div class="w-6 h-6 rounded-full bg-[#263F36] mb-1.5 shadow-sm"></div>
+        <span class="text-[10px] font-semibold text-[#192C25]">Forest</span>
+        <span class="text-[9px] text-[#4A6B5F]">#263F36</span>
+      </div>
+      <div class="flex flex-col items-center p-2 rounded-lg bg-[#F8F6F1] border border-[#EAE2D5]">
+        <div class="w-6 h-6 rounded-full bg-[#C5A77A] mb-1.5 shadow-sm"></div>
+        <span class="text-[10px] font-semibold text-[#192C25]">Champagne</span>
+        <span class="text-[9px] text-[#4A6B5F]">#C5A77A</span>
+      </div>
+    </div>
+    <div class="text-[11px] text-[#325247] flex justify-between pt-1 border-t border-[#EAE2D5]">
+      <span><strong class="font-serif text-sm">Cormorant Garamond</strong> (Headings)</span>
+      <span><strong>Manrope</strong> (Interface/Body)</span>
+    </div>
+  </section>
+
+  <!-- Navigation Systems (Desktop & Mobile) -->
+  <section class="mb-8">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-sm font-semibold tracking-wide uppercase text-[#192C25] flex items-center gap-2">
+        <svg class="w-4 h-4 text-[#C5A77A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        Navigation Taxonomy
+      </h2>
+      <span class="text-[10px] text-[#C5A77A] tracking-wider uppercase font-semibold">Dual System</span>
+    </div>
+
+    <div class="space-y-3">
+      <!-- Desktop Shell Bar -->
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-3.5 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-semibold text-[#192C25]">Desktop Persistent Nav</span>
+          <span class="text-[10px] px-2 py-0.5 rounded bg-[#FAF8F4] text-[#4A6B5F] border border-[#EAE2D5]">Top Floating Bar</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5 text-[11px] text-[#325247]">
+          <span class="px-2 py-1 bg-[#F8F6F1] rounded border border-[#EAE2D5]">Brand Mark</span>
+          <span class="px-2 py-1 bg-[#F8F6F1] rounded border border-[#EAE2D5]">Explore</span>
+          <span class="px-2 py-1 bg-[#F8F6F1] rounded border border-[#EAE2D5]">Journal</span>
+          <span class="px-2 py-1 bg-[#F8F6F1] rounded border border-[#EAE2D5]">Plan Trip</span>
+          <span class="px-2 py-1 bg-[#F8F6F1] rounded border border-[#EAE2D5]">My Trips <span class="text-[9px] text-[#C5A77A]">🔒</span></span>
+          <span class="px-2 py-1 bg-[#263F36] text-[#F8F6F1] rounded font-medium ml-auto">Account</span>
+        </div>
+      </div>
+
+      <!-- Mobile Tab Bar Shell -->
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-3.5 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-semibold text-[#192C25]">Mobile Persistent Shell</span>
+          <span class="text-[10px] px-2 py-0.5 rounded bg-[#FAF8F4] text-[#4A6B5F] border border-[#EAE2D5]">Sticky Bottom Tabbar</span>
+        </div>
+        <div class="grid grid-cols-5 gap-1 text-center text-[10px]">
+          <div class="p-1.5 rounded bg-[#FAF8F4] border border-[#EAE2D5] font-medium text-[#263F36]">
+            <div>🏛️</div>
+            <div class="mt-1">Home</div>
+          </div>
+          <div class="p-1.5 rounded bg-[#FAF8F4] border border-[#EAE2D5] font-medium text-[#263F36]">
+            <div>🧭</div>
+            <div class="mt-1">Explore</div>
+          </div>
+          <div class="p-1.5 rounded bg-[#263F36] text-[#F8F6F1] font-semibold shadow">
+            <div>✨</div>
+            <div class="mt-1">Plan</div>
+          </div>
+          <div class="p-1.5 rounded bg-[#FAF8F4] border border-[#EAE2D5] font-medium text-[#263F36]">
+            <div>📖</div>
+            <div class="mt-1">Journal</div>
+          </div>
+          <div class="p-1.5 rounded bg-[#FAF8F4] border border-[#EAE2D5] font-medium text-[#263F36]">
+            <div>👤</div>
+            <div class="mt-1">Trips/User</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete 8-Page Hierarchy & Flow Architecture -->
+  <section class="mb-10">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-sm font-semibold tracking-wide uppercase text-[#192C25] flex items-center gap-2">
+        <svg class="w-4 h-4 text-[#C5A77A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+        Sitemap & Screen Architecture
+      </h2>
+      <span class="text-[10px] text-[#4A6B5F]">8 Connected Nodes</span>
+    </div>
+
+    <!-- Node 1: Homepage -->
+    <div class="connector-line mb-4 pl-10 relative">
+      <div class="absolute left-2.5 top-3 w-4 h-4 rounded-full bg-[#263F36] border-2 border-[#C5A77A] z-10 flex items-center justify-center text-[8px] text-[#F8F6F1] font-bold">1</div>
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-4 shadow-sm hover:border-[#C5A77A] transition-colors">
+        <div class="flex items-start justify-between mb-1.5">
+          <div>
+            <h3 class="font-serif text-lg font-semibold text-[#192C25]">Homepage</h3>
+            <span class="text-[10px] text-[#4A6B5F] font-mono">/</span>
+          </div>
+          <span class="badge-public text-[9px] uppercase px-2 py-0.5 rounded font-semibold tracking-wider">Public</span>
+        </div>
+        <p class="text-xs text-[#4A6B5F] mb-3 leading-relaxed">
+          Cinematic hero marquee, quick omni-search, curated luxury destinations, editorial categories, featured bespoke journeys, curated journal preview & high-touch concierge CTA.
+        </p>
+        <div class="bg-[#FAF8F4] p-2.5 rounded-lg border border-[#EAE2D5] text-[11px] mb-2 space-y-1">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A]">Key UI Components</div>
+          <div class="text-[#325247]">HeroVideoBanner, OmniSearchBar, DestinationScroller, EditorialCards, LuxuryValueProps, GlobalFooter</div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] pt-1">
+          <span class="text-[#4A6B5F]">Primary CTA:</span>
+          <span class="font-semibold text-[#263F36] bg-[#C5A77A]/20 px-2 py-0.5 rounded text-[10px]">"Plan Your Journey" → #4</span>
+        </div>
+        <div class="text-[10px] text-[#926C38] mt-2 flex items-center gap-1">
+          <span>↳ Downstream:</span>
+          <span class="underline">Explore (#2)</span> • <span class="underline">Journal (#7)</span> • <span class="underline">Plan a Trip (#4)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 2: Explore Destinations -->
+    <div class="connector-line mb-4 pl-10 relative">
+      <div class="absolute left-2.5 top-3 w-4 h-4 rounded-full bg-[#FAF8F4] border-2 border-[#263F36] z-10 flex items-center justify-center text-[8px] text-[#263F36] font-bold">2</div>
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-4 shadow-sm hover:border-[#C5A77A] transition-colors">
+        <div class="flex items-start justify-between mb-1.5">
+          <div>
+            <h3 class="font-serif text-lg font-semibold text-[#192C25]">Explore Destinations</h3>
+            <span class="text-[10px] text-[#4A6B5F] font-mono">/destinations</span>
+          </div>
+          <span class="badge-public text-[9px] uppercase px-2 py-0.5 rounded font-semibold tracking-wider">Public</span>
+        </div>
+        <p class="text-xs text-[#4A6B5F] mb-3 leading-relaxed">
+          Geo-targeted destination search engine, luxury niche filters (Nordic Retreats, Island Villas, Alpine Havens), sorting (Curated, Climate, Seasonality), interactive map preview toggle.
+        </p>
+        <div class="bg-[#FAF8F4] p-2.5 rounded-lg border border-[#EAE2D5] text-[11px] mb-2 space-y-1">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A]">Key UI Components</div>
+          <div class="text-[#325247]">FilterPills, SeasonalityToggle, DestinationCardGrid, QuickSaveHeart, MapModalDrawer</div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] pt-1">
+          <span class="text-[#4A6B5F]">Primary CTA:</span>
+          <span class="font-semibold text-[#263F36] bg-[#C5A77A]/20 px-2 py-0.5 rounded text-[10px]">"View Destination Dossier" → #3</span>
+        </div>
+        <div class="text-[10px] text-[#926C38] mt-2 flex items-center gap-1">
+          <span>↳ Downstream:</span>
+          <span class="underline">Destination Detail (#3)</span> • <span class="underline">Save to Favorites (#6)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 3: Destination Detail -->
+    <div class="connector-line mb-4 pl-10 relative">
+      <div class="absolute left-2.5 top-3 w-4 h-4 rounded-full bg-[#FAF8F4] border-2 border-[#263F36] z-10 flex items-center justify-center text-[8px] text-[#263F36] font-bold">3</div>
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-4 shadow-sm hover:border-[#C5A77A] transition-colors">
+        <div class="flex items-start justify-between mb-1.5">
+          <div>
+            <h3 class="font-serif text-lg font-semibold text-[#192C25]">Destination Detail</h3>
+            <span class="text-[10px] text-[#4A6B5F] font-mono">/destinations/[slug]</span>
+          </div>
+          <span class="badge-public text-[9px] uppercase px-2 py-0.5 rounded font-semibold tracking-wider">Public</span>
+        </div>
+        <p class="text-xs text-[#4A6B5F] mb-3 leading-relaxed">
+          Full-bleed hero photography, curated overview, seasonal highlights, private guide tips, recommended boutique accommodations & suggested 3/5/7-day itineraries.
+        </p>
+        <div class="bg-[#FAF8F4] p-2.5 rounded-lg border border-[#EAE2D5] text-[11px] mb-2 space-y-1">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A]">Key UI Components</div>
+          <div class="text-[#325247]">ParallaxGallery, HighlightsAccordion, InsiderGuideCard, SampleItineraryTimeline, StickyBookingBar</div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] pt-1">
+          <span class="text-[#4A6B5F]">Primary CTA:</span>
+          <span class="font-semibold text-[#263F36] bg-[#C5A77A]/20 px-2 py-0.5 rounded text-[10px]">"Plan Trip Here" → #4 (Pre-populated)</span>
+        </div>
+        <div class="text-[10px] text-[#926C38] mt-2 flex items-center gap-1">
+          <span>↳ Downstream:</span>
+          <span class="underline">Plan a Trip (#4)</span> • <span class="underline">Journal Deep Dives (#7)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 4: Plan a Trip (Wizard) -->
+    <div class="connector-line mb-4 pl-10 relative">
+      <div class="absolute left-2.5 top-3 w-4 h-4 rounded-full bg-[#C5A77A] border-2 border-[#192C25] z-10 flex items-center justify-center text-[8px] text-[#192C25] font-bold">4</div>
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-4 shadow-sm hover:border-[#C5A77A] transition-colors">
+        <div class="flex items-start justify-between mb-1.5">
+          <div>
+            <h3 class="font-serif text-lg font-semibold text-[#192C25]">Plan a Trip (Flow)</h3>
+            <span class="text-[10px] text-[#4A6B5F] font-mono">/plan/new</span>
+          </div>
+          <span class="badge-public text-[9px] uppercase px-2 py-0.5 rounded font-semibold tracking-wider">Public / Guest OK</span>
+        </div>
+        <p class="text-xs text-[#4A6B5F] mb-3 leading-relaxed">
+          Multi-step bespoke configuration wizard: Destination selector, calendar date range picker, travel party (solo, couple, private group), luxury pace & interest preferences (gastronomy, culture, wellness).
+        </p>
+        <div class="bg-[#FAF8F4] p-2.5 rounded-lg border border-[#EAE2D5] text-[11px] mb-2 space-y-1">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A]">Key UI Components</div>
+          <div class="text-[#325247]">StepProgressIndicator, LuxuryDatePicker, TravelerStepper, StyleTagSelector, CostEstimator</div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] pt-1">
+          <span class="text-[#4A6B5F]">Primary CTA:</span>
+          <span class="font-semibold text-[#263F36] bg-[#C5A77A]/20 px-2 py-0.5 rounded text-[10px]">"Generate Itinerary" → #5</span>
+        </div>
+        <div class="text-[10px] text-[#926C38] mt-2 flex items-center gap-1">
+          <span>↳ If Not Signed In:</span>
+          <span class="underline">Prompt Quick Sign-up (#8) to Save</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 5: Trip Dashboard (Core Workhorse) -->
+    <div class="connector-line mb-4 pl-10 relative">
+      <div class="absolute left-2.5 top-3 w-4 h-4 rounded-full bg-[#263F36] border-2 border-[#C5A77A] z-10 flex items-center justify-center text-[8px] text-[#F8F6F1] font-bold">5</div>
+      <div class="bg-white border-2 border-[#263F36] rounded-xl p-4 shadow-md">
+        <div class="flex items-start justify-between mb-1.5">
+          <div>
+            <div class="flex items-center gap-1.5">
+              <h3 class="font-serif text-lg font-bold text-[#192C25]">Trip Dashboard</h3>
+              <span class="text-[9px] bg-[#263F36] text-[#F8F6F1] px-1.5 py-0.5 rounded font-bold">CORE</span>
+            </div>
+            <span class="text-[10px] text-[#4A6B5F] font-mono">/trips/[tripId]</span>
+          </div>
+          <span class="badge-auth text-[9px] uppercase px-2 py-0.5 rounded font-bold tracking-wider">Auth Required</span>
+        </div>
+        <p class="text-xs text-[#4A6B5F] mb-3 leading-relaxed">
+          Interactive day-by-day planner, dynamic chronological activity cards, embedded interactive route map, multi-currency budget tracker, booking attachments & collaborative notes.
+        </p>
+        <div class="bg-[#FAF8F4] p-2.5 rounded-lg border border-[#EAE2D5] text-[11px] mb-2 space-y-1">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A]">Key UI Components</div>
+          <div class="text-[#325247]">DayTabsScroller, DragDropTimeline, LiveMapSplitView, ExpenseProgressCircle, DocumentVault</div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] pt-1">
+          <span class="text-[#4A6B5F]">Primary CTA:</span>
+          <span class="font-semibold text-[#263F36] bg-[#C5A77A]/20 px-2 py-0.5 rounded text-[10px]">"Add Activity / Export PDF"</span>
+        </div>
+        <div class="text-[10px] text-[#926C38] mt-2 flex items-center gap-1">
+          <span>↳ Connected To:</span>
+          <span class="underline">My Trips (#6)</span> • <span class="underline">Explore (#2) for suggestions</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 6: My Trips -->
+    <div class="connector-line mb-4 pl-10 relative">
+      <div class="absolute left-2.5 top-3 w-4 h-4 rounded-full bg-[#FAF8F4] border-2 border-[#263F36] z-10 flex items-center justify-center text-[8px] text-[#263F36] font-bold">6</div>
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-4 shadow-sm hover:border-[#C5A77A] transition-colors">
+        <div class="flex items-start justify-between mb-1.5">
+          <div>
+            <h3 class="font-serif text-lg font-semibold text-[#192C25]">My Trips & Hub</h3>
+            <span class="text-[10px] text-[#4A6B5F] font-mono">/my-trips</span>
+          </div>
+          <span class="badge-auth text-[9px] uppercase px-2 py-0.5 rounded font-bold tracking-wider">Auth Required</span>
+        </div>
+        <p class="text-xs text-[#4A6B5F] mb-3 leading-relaxed">
+          Master personal archive: Upcoming booked journeys, drafting itineraries, past archive, wishlist/curated destination favorites and invitation management for travel companions.
+        </p>
+        <div class="bg-[#FAF8F4] p-2.5 rounded-lg border border-[#EAE2D5] text-[11px] mb-2 space-y-1">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A]">Key UI Components</div>
+          <div class="text-[#325247]">TripStatusTabs (Upcoming/Draft/Past), JourneyCard, FavoriteDestinationsTray, ShareInviteModal</div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] pt-1">
+          <span class="text-[#4A6B5F]">Primary CTA:</span>
+          <span class="font-semibold text-[#263F36] bg-[#C5A77A]/20 px-2 py-0.5 rounded text-[10px]">"Open Trip" → #5 | "Create New" → #4</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 7: Travel Journal -->
+    <div class="connector-line mb-4 pl-10 relative">
+      <div class="absolute left-2.5 top-3 w-4 h-4 rounded-full bg-[#FAF8F4] border-2 border-[#263F36] z-10 flex items-center justify-center text-[8px] text-[#263F36] font-bold">7</div>
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-4 shadow-sm hover:border-[#C5A77A] transition-colors">
+        <div class="flex items-start justify-between mb-1.5">
+          <div>
+            <h3 class="font-serif text-lg font-semibold text-[#192C25]">Travel Journal</h3>
+            <span class="text-[10px] text-[#4A6B5F] font-mono">/journal & /journal/[slug]</span>
+          </div>
+          <span class="badge-public text-[9px] uppercase px-2 py-0.5 rounded font-semibold tracking-wider">Public</span>
+        </div>
+        <p class="text-xs text-[#4A6B5F] mb-3 leading-relaxed">
+          Long-form editorial essays, bespoke cultural guides, curator interviews, architectural roundups, and contextual "Add to My Trip" inline itinerary bookmarks.
+        </p>
+        <div class="bg-[#FAF8F4] p-2.5 rounded-lg border border-[#EAE2D5] text-[11px] mb-2 space-y-1">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A]">Key UI Components</div>
+          <div class="text-[#325247]">EditorialHero, ReadingTimeEstimate, InlinePlaceCard, CuratedAuthorByline, NewsletterDispatch</div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] pt-1">
+          <span class="text-[#4A6B5F]">Primary CTA:</span>
+          <span class="font-semibold text-[#263F36] bg-[#C5A77A]/20 px-2 py-0.5 rounded text-[10px]">"Bookmark to Itinerary" / "Read Next"</span>
+        </div>
+        <div class="text-[10px] text-[#926C38] mt-2 flex items-center gap-1">
+          <span>↳ Downstream:</span>
+          <span class="underline">Explore Destination (#2)</span> • <span class="underline">Plan a Trip (#4)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 8: Account & Settings -->
+    <div class="node-last pl-10 relative">
+      <div class="absolute left-2.5 top-3 w-4 h-4 rounded-full bg-[#FAF8F4] border-2 border-[#263F36] z-10 flex items-center justify-center text-[8px] text-[#263F36] font-bold">8</div>
+      <div class="bg-white border border-[#EAE2D5] rounded-xl p-4 shadow-sm hover:border-[#C5A77A] transition-colors">
+        <div class="flex items-start justify-between mb-1.5">
+          <div>
+            <h3 class="font-serif text-lg font-semibold text-[#192C25]">Account & Settings</h3>
+            <span class="text-[10px] text-[#4A6B5F] font-mono">/account & /auth</span>
+          </div>
+          <span class="badge-auth text-[9px] uppercase px-2 py-0.5 rounded font-bold tracking-wider">Gate / Profile</span>
+        </div>
+        <p class="text-xs text-[#4A6B5F] mb-3 leading-relaxed">
+          Concierge profile preferences (dietary, airline loyalty, luxury tier), saved payment methods, security & 2FA, notification dispatch preferences, and session management.
+        </p>
+        <div class="bg-[#FAF8F4] p-2.5 rounded-lg border border-[#EAE2D5] text-[11px] mb-2 space-y-1">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A]">Key UI Components</div>
+          <div class="text-[#325247]">AuthTabs (SignIn/SignUp), TravelerPreferenceForm, LoyaltyProgramSync, SecurityToggles</div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] pt-1">
+          <span class="text-[#4A6B5F]">Primary CTA:</span>
+          <span class="font-semibold text-[#263F36] bg-[#C5A77A]/20 px-2 py-0.5 rounded text-[10px]">"Save Preferences" / "Access Trips"</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Primary User Journeys Matrix -->
+  <section class="mb-10 bg-white border border-[#EAE2D5] rounded-2xl p-4 shadow-sm">
+    <h2 class="text-sm font-semibold tracking-wide uppercase text-[#192C25] mb-3 flex items-center gap-2">
+      <svg class="w-4 h-4 text-[#C5A77A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+      Primary User Journeys (UX Flows)
+    </h2>
+
+    <div class="space-y-3 text-xs">
+      <!-- Journey 1 -->
+      <div class="p-3 bg-[#FAF8F4] rounded-xl border border-[#EAE2D5]">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="font-semibold text-[#192C25]">Journey A: Inspiration to Itinerary</span>
+          <span class="text-[9px] text-[#C5A77A] font-bold uppercase">Discovery Path</span>
+        </div>
+        <div class="text-[#4A6B5F] flex items-center flex-wrap gap-1 text-[11px]">
+          <span>Home</span> <span class="text-[#C5A77A]">→</span>
+          <span>Journal / Explore</span> <span class="text-[#C5A77A]">→</span>
+          <span>Destination Detail</span> <span class="text-[#C5A77A]">→</span>
+          <span>Plan Trip (Prefilled)</span> <span class="text-[#C5A77A]">→</span>
+          <span class="font-semibold text-[#263F36]">Trip Dashboard</span>
+        </div>
+      </div>
+
+      <!-- Journey 2 -->
+      <div class="p-3 bg-[#FAF8F4] rounded-xl border border-[#EAE2D5]">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="font-semibold text-[#192C25]">Journey B: Direct Trip Creation</span>
+          <span class="text-[9px] text-[#C5A77A] font-bold uppercase">Planner Path</span>
+        </div>
+        <div class="text-[#4A6B5F] flex items-center flex-wrap gap-1 text-[11px]">
+          <span>Direct CTA / Nav</span> <span class="text-[#C5A77A]">→</span>
+          <span>Plan a Trip Wizard</span> <span class="text-[#C5A77A]">→</span>
+          <span>Trip Dashboard (Draft)</span> <span class="text-[#C5A77A]">→</span>
+          <span>Sign In Modal</span> <span class="text-[#C5A77A]">→</span>
+          <span class="font-semibold text-[#263F36]">Saved to My Trips</span>
+        </div>
+      </div>
+
+      <!-- Journey 3 -->
+      <div class="p-3 bg-[#FAF8F4] rounded-xl border border-[#EAE2D5]">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="font-semibold text-[#192C25]">Journey C: Active Travel Execution</span>
+          <span class="text-[9px] text-[#C5A77A] font-bold uppercase">In-Trip Path</span>
+        </div>
+        <div class="text-[#4A6B5F] flex items-center flex-wrap gap-1 text-[11px]">
+          <span>Login / Mobile App</span> <span class="text-[#C5A77A]">→</span>
+          <span>My Trips (Upcoming)</span> <span class="text-[#C5A77A]">→</span>
+          <span>Trip Dashboard</span> <span class="text-[#C5A77A]">→</span>
+          <span class="font-semibold text-[#263F36]">Day Timeline & Live Map</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reusable UI Components Library -->
+  <section class="mb-8">
+    <h2 class="text-sm font-semibold tracking-wide uppercase text-[#192C25] mb-3 flex items-center gap-2">
+      <svg class="w-4 h-4 text-[#C5A77A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+      Component Design System Matrix
+    </h2>
+
+    <div class="grid grid-cols-2 gap-2 text-xs">
+      <div class="p-2.5 bg-white border border-[#EAE2D5] rounded-xl">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A] mb-1">Navigation</div>
+        <p class="text-[11px] text-[#325247]">DesktopTopNav, MobileTabBar, BreadcrumbDossier, UserAvatarMenu</p>
+      </div>
+      <div class="p-2.5 bg-white border border-[#EAE2D5] rounded-xl">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A] mb-1">Cards & Teasers</div>
+        <p class="text-[11px] text-[#325247]">DestinationCard, EditorialFeatureCard, ActivityBlock, QuickSaveToggle</p>
+      </div>
+      <div class="p-2.5 bg-white border border-[#EAE2D5] rounded-xl">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A] mb-1">Planning Modules</div>
+        <p class="text-[11px] text-[#325247]">TimelineItem, DayTabsHeader, CostTrackerBar, MapPinDrawer</p>
+      </div>
+      <div class="p-2.5 bg-white border border-[#EAE2D5] rounded-xl">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-[#C5A77A] mb-1">Global Core</div>
+        <p class="text-[11px] text-[#325247]">LuxuryButton, OmniSearchBar, ModalFrame, EditorialFooter</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer Map -->
+  <footer class="pt-6 border-t border-[#EAE2D5] text-center text-xs text-[#4A6B5F]">
+    <div class="font-serif text-lg text-[#192C25] font-semibold mb-1">ROAM Architecture Complete</div>
+    <p class="text-[11px] leading-relaxed mb-3">
+      Established structural baseline for 8 screens with luxury editorial aesthetic (Ivory #F8F6F1, Forest #263F36, Gold #C5A77A).
+    </p>
+    <div class="flex items-center justify-center gap-3 text-[10px] text-[#C5A77A] font-semibold uppercase tracking-wider">
+      <span>Information Architecture</span>
+      <span>•</span>
+      <span>Sitemap Approved</span>
+      <span>•</span>
+      <span>Ready for Screen Build</span>
+    </div>
+  </footer>
+
