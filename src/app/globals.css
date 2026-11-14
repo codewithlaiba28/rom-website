@@ -1,26 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-surface-tint: #4a645a;
+  --color-on-surface-variant: #424845;
+  --color-surface-bright: #f7faf4;
+  --color-on-tertiary-fixed-variant: #484740;
+  --color-outline-variant: #c2c8c3;
+  --color-secondary-container: #fcdbaa;
+  --color-primary-container: #263f36;
+  --color-error-container: #ffdad6;
+  --color-on-secondary-fixed-variant: #59431f;
+  --color-on-tertiary-container: #a7a49b;
+  --color-on-secondary-container: #775f38;
+  --color-tertiary: #25241f;
+  --color-on-primary-fixed: #062018;
+  --color-on-tertiary-fixed: #1c1c16;
+  --color-surface-container-high: #e6e9e3;
+  --color-on-background: #191d19;
+  --color-error: #ba1a1a;
+  --color-inverse-surface: #2d312d;
+  --color-surface-variant: #e0e3dd;
+  --color-on-secondary-fixed: #281900;
+  --color-on-primary-container: #8faa9e;
+  --color-secondary-fixed: #ffdead;
+  --color-surface: #f7faf4;
+  --color-on-error-container: #93000a;
+  --color-on-primary-fixed-variant: #334c42;
+  --color-on-surface: #191d19;
+  --color-primary: #102921;
+  --color-tertiary-container: #3b3a34;
+  --color-on-error: #ffffff;
+  --color-on-primary: #ffffff;
+  --color-secondary: #725a34;
+  --color-inverse-on-surface: #eff2eb;
+  --color-surface-dim: #d8dbd5;
+  --color-tertiary-fixed-dim: #cac6be;
+  --color-surface-container: #ecefe8;
+  --color-tertiary-fixed: #e6e2d9;
+  --color-on-secondary: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-inverse-primary: #b1cdc0;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-highest: #e0e3dd;
+  --color-secondary-fixed-dim: #e2c293;
+  --color-surface-container-low: #f2f5ee;
+  --color-primary-fixed: #cce9dc;
+  --color-background: #f7faf4;
+  --color-outline: #727975;
+  --color-primary-fixed-dim: #b1cdc0;
+
+  --spacing-margin: 3rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-2xl: 4rem;
+  --spacing-margin-mobile: 1.25rem;
+
+  --font-manrope: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-garamond: var(--font-garamond), Georgia, Cambria, serif;
+
+  --font-body-md: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-sm: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-lg: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-sm: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-md: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-lg: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --font-headline-sm: var(--font-garamond), Georgia, serif;
+  --font-headline-md: var(--font-garamond), Georgia, serif;
+  --font-headline-lg: var(--font-garamond), Georgia, serif;
+  --font-display-hero: var(--font-garamond), Georgia, serif;
+  --font-display-hero-mobile: var(--font-garamond), Georgia, serif;
+
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.08em;
+
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.06em;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--letter-spacing: 0.04em;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+
+  --text-headline-sm: 22px;
+  --text-headline-sm--line-height: 30px;
+
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 36px;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.015em;
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+
+  --text-display-hero: 56px;
+  --text-display-hero--line-height: 64px;
+  --text-display-hero--letter-spacing: -0.02em;
+
+  --text-display-hero-mobile: 36px;
+  --text-display-hero-mobile--line-height: 44px;
+  --text-display-hero-mobile--letter-spacing: -0.01em;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-surface-tint: #bfe0d2;
+  --color-on-surface-variant: #c5d3cc;
+  --color-surface-bright: #ffffff;
+  --color-on-tertiary-fixed-variant: #cac5b8;
+  --color-outline-variant: #7e9188;
+  --color-secondary-container: #49391e;
+  --color-primary-container: #1b3229;
+  --color-error-container: #93000a;
+  --color-on-secondary-fixed-variant: #ffdead;
+  --color-on-tertiary-container: #3d3b34;
+  --color-on-secondary-container: #fedba9;
+  --color-tertiary: #dfdacd;
+  --color-on-primary-fixed: #062018;
+  --color-on-tertiary-fixed: #1c1c16;
+  --color-surface-container-high: #1e2e26;
+  --color-on-background: #f7faf5;
+  --color-error: #ffb4ab;
+  --color-inverse-surface: #f7faf5;
+  --color-surface-variant: #c5d3cc;
+  --color-on-secondary-fixed: #281900;
+  --color-on-primary-container: #cce9dc;
+  --color-secondary-fixed: #ffdead;
+  --color-surface: #0b110e;
+  --color-on-error-container: #ffdad6;
+  --color-on-primary-fixed-variant: #334c42;
+  --color-on-surface: #f7faf5;
+  --color-primary: #d6ede2;
+  --color-tertiary-container: #3d3b34;
+  --color-on-error: #690005;
+  --color-on-primary: #071912;
+  --color-secondary: #f5d9a9;
+  --color-inverse-on-surface: #0b110e;
+  --color-surface-dim: #070c0a;
+  --color-tertiary-fixed-dim: #cac6be;
+  --color-surface-container: #18251f;
+  --color-tertiary-fixed: #e6e2d9;
+  --color-on-secondary: #261b07;
+  --color-surface-container-lowest: #0f1713;
+  --color-inverse-primary: #102921;
+  --color-on-tertiary: #1f1e19;
+  --color-surface-container-highest: #26382f;
+  --color-secondary-fixed-dim: #e2c293;
+  --color-surface-container-low: #131d18;
+  --color-primary-fixed: #cce9dc;
+  --color-background: #0b110e;
+  --color-outline: #9eb0a7;
+  --color-primary-fixed-dim: #b1cdc0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+  body {
+    background-color: var(--color-surface, #f7faf4);
+    color: var(--color-on-surface, #191d19);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Bespoke Luxury Visible Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f5ee;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a645a;
+  border-radius: 9999px;
+  border: 2px solid #f2f5ee;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #263f36;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a645a #f2f5ee;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0b110e;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #26382f;
+  border: 2px solid #0b110e;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #c5a77a;
+}
+html.dark * {
+  scrollbar-color: #26382f #0b110e;
+}
+
+/* Dark Mode Fine-Tuning for Architectural Blueprint & Showcase Cards */
+html.dark .bg-white {
+  background-color: #121c17 !important;
+  color: #edf3ee !important;
+}
+html.dark .bg-\[\#FAF8F4\],
+html.dark .bg-\[\#F8F6F1\] {
+  background-color: #18251f !important;
+  color: #edf3ee !important;
+}
+html.dark .border-\[\#EAE2D5\],
+html.dark .border-\[\#263F36\]\/10,
+html.dark .border-\[\#263F36\]\/15 {
+  border-color: rgba(226, 194, 147, 0.16) !important;
+}
+html.dark .text-\[\#192C25\],
+html.dark .text-\[\#263F36\],
+html.dark .text-\[\#325247\] {
+  color: #edf3ee !important;
+}
+html.dark .text-\[\#4A6B5F\],
+html.dark .text-\[\#263F36\]\/70,
+html.dark .text-\[\#263F36\]\/60 {
+  color: #c5d3cc !important;
+}
+
+/* Ensure all text classes are crystal clear and high-contrast in Nightfall / Dark Mode */
+html.dark .text-surface {
+  color: #f7faf5 !important;
+}
+html.dark [class*="text-surface/"] {
+  color: #f7faf5 !important;
+}
+html.dark .text-surface-variant {
+  color: #c5d3cc !important;
+}
+html.dark [class*="text-surface-variant/"] {
+  color: #c5d3cc !important;
+}
+html.dark .text-surface-bright {
+  color: #ffffff !important;
+}
+html.dark .text-on-surface {
+  color: #f7faf5 !important;
+}
+html.dark .text-on-surface-variant {
+  color: #c5d3cc !important;
+}
+html.dark .text-primary {
+  color: #d6ede2 !important;
+}
+html.dark .text-secondary {
+  color: #f5d9a9 !important;
+}
+html.dark .text-outline {
+  color: #9eb0a7 !important;
+}
+html.dark .text-outline-variant {
+  color: #7e9188 !important;
+}
+
+/* Form Controls & Inputs Contrast */
+html.dark input,
+html.dark textarea {
+  color: #f7faf5 !important;
+}
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #8c9e96 !important;
+}
+html.dark select {
+  color: #f7faf5 !important;
+}
+html.dark select option {
+  background-color: #18251f !important;
+  color: #f7faf5 !important;
+}
+
+/* 3D Flip Card Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.perspective-1200 {
+  perspective: 1200px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Scroll-triggered Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95) translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-36px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-left.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(36px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Luxury Interactive Hover Effects */
+.hover-float {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -6px rgba(16, 41, 33, 0.12), 0 4px 12px -2px rgba(114, 90, 52, 0.08);
+}
+
+.hover-glow {
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.hover-glow:hover {
+  box-shadow: 0 0 24px -2px rgba(252, 219, 170, 0.35);
+  border-color: rgba(252, 219, 170, 0.6);
+}
+
+.hover-scale-subtle {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-scale-subtle:hover {
+  transform: scale(1.02);
+}
+
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v382/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHeem.ttf) format('truetype');
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
