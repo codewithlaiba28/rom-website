@@ -1,0 +1,52 @@
+import sharp from 'sharp';
+import fs from 'fs';
+
+// Exact SVG from Stitch screen "ROAM Luxury Atelier Logo" (Screen ID: 2849153669c04ef1b84ebd9b0414a915)
+const fullLogoSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <!-- Minimalist Luxury Emblem: Stylized Astrolabe / Compass Star & Letter R -->
+  <g transform="translate(4, 6)">
+    <!-- Outer delicate concentric ring -->
+    <circle cx="24" cy="24" r="22" stroke="#263F36" stroke-width="1.2" stroke-opacity="0.3" />
+    <circle cx="24" cy="24" r="18" stroke="#C5A77A" stroke-width="1.5" />
+    <!-- Compass directional pips -->
+    <line x1="24" y1="2" x2="24" y2="7" stroke="#263F36" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="24" y1="41" x2="24" y2="46" stroke="#263F36" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="2" y1="24" x2="7" y2="24" stroke="#263F36" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="41" y1="24" x2="46" y2="24" stroke="#263F36" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Subtle 4-point gold star inside -->
+    <path d="M24 10 L26.5 21.5 L38 24 L26.5 26.5 L24 38 L21.5 26.5 L10 24 L21.5 21.5 Z" fill="#263F36" />
+    <circle cx="24" cy="24" r="2.5" fill="#C5A77A" />
+  </g>
+  <!-- Wordmark: ROAM & Atelier subtitle -->
+  <text x="64" y="32" font-family="'EB Garamond', 'Cormorant Garamond', Georgia, serif" font-size="28" font-weight="600" letter-spacing="4.5" fill="#263F36">ROAM</text>
+  <text x="66" y="45" font-family="'Manrope', sans-serif" font-size="8" font-weight="500" letter-spacing="2.8" fill="#C5A77A">TRAVEL ATELIER</text>
+</svg>`;
+
+// Standalone Mark (Astrolabe emblem)
+const emblemMarkSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60" fill="none">
+  <g transform="translate(6, 6)">
+    <circle cx="24" cy="24" r="22" stroke="#263F36" stroke-width="1.2" stroke-opacity="0.3" />
+    <circle cx="24" cy="24" r="18" stroke="#C5A77A" stroke-width="1.5" />
+    <line x1="24" y1="2" x2="24" y2="7" stroke="#263F36" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="24" y1="41" x2="24" y2="46" stroke="#263F36" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="2" y1="24" x2="7" y2="24" stroke="#263F36" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="41" y1="24" x2="46" y2="24" stroke="#263F36" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M24 10 L26.5 21.5 L38 24 L26.5 26.5 L24 38 L21.5 26.5 L10 24 L21.5 21.5 Z" fill="#263F36" />
+    <circle cx="24" cy="24" r="2.5" fill="#C5A77A" />
+  </g>
+</svg>`;
+
+fs.writeFileSync('public/images/roam/logo.svg', fullLogoSvg);
+fs.writeFileSync('public/images/roam/logo-mark.svg', emblemMarkSvg);
+
+// Generate crisp high-resolution PNG for logo.png (used by Navbar and Footer next/image)
+await sharp(Buffer.from(fullLogoSvg), { density: 300 })
+  .png()
+  .toFile('public/images/roam/logo.png');
+
+await sharp(Buffer.from(emblemMarkSvg), { density: 300 })
+  .resize(256, 256)
+  .png()
+  .toFile('public/images/roam/logo-mark.png');
+
+console.log('Successfully generated official Stitch ROAM logo assets!');
